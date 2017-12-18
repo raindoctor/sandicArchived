@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>rc/default.css</file>
+        <file>rc/magnifying_glass.png</file>
+        <file>rc/map.html</file>
+        <file>rc/siddhanta-calcutta.ttf</file>
+        <file>rc/splash_en_EN.png</file>
+        <file>rc/splash_ru_RU.png</file>
+        <file>rc/qt_ru.qm</file>
+        <file>rc/sandic_ru.qm</file>
+        <file>rc/home.png</file>
+    </qresource>
+</RCC>

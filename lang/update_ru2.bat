@@ -1,0 +1,1 @@
+lupdate -no-obsolete ../sandic.pro -ts sandic_ru.ts
