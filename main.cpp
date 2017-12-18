@@ -49,6 +49,17 @@ int main(int argc, char* argv[])
     trans2.load(":/rc/qt_" + locale);
     app.installTranslator(&trans2);
 
+#ifdef Q_OS_MAC
+    CFBundleRef mainBundle = CFBundleGetMainBundle();
+    CFURLRef resourcesURL = CFBundleCopyResourcesDirectoryURL(mainBundle);
+    char path[PATH_MAX];
+    if (!CFURLGetFileSystemRepresentation(resourcesURL, TRUE, (UInt8 *)path, PATH_MAX)) {
+        // error
+        }
+    CFRelease(resourcesURL);
+    // chdir(path);
+	QDir::setCurrent(path);
+#endif
 
     QString dbName = "sandic.db";
 
@@ -68,13 +79,10 @@ int main(int argc, char* argv[])
         exit(-1);
     }
     
-    sqlite3 *db_handle = *static_cast<sqlite3**>(db.driver()->handle().data());
-    if (db_handle != 0) {
-        sqlite3_initialize();
-        sqlite3_create_function(db_handle, "regexp", 2, SQLITE_UTF8, NULL, &regexp, NULL, NULL);
+    sqlite3_create_function(*static_cast<sqlite3**>(db.driver()->handle().data()), "regexp", 2, SQLITE_UTF8, NULL, &regexp, NULL, NULL);
 
-        QSqlQuery query("PRAGMA cache_size = -150000", db); // 153.600.000b
-    }
+    QSqlQuery query("PRAGMA cache_size = -150000", db); // 153.600.000b
+
     QSplashScreen splash(QPixmap(QString(":/rc/splash_%1.png").arg(locale)));
     splash.show();
 

@@ -7,7 +7,8 @@ QT       += core gui sql widgets
 
 TARGET = sandic
 TEMPLATE = app
-LIBS += -lsqlite3
+LIBS += -lsqlite3 -framework CoreFoundation
+QMAKE_LFLAGS += -F /System/Library/Frameworks/CoreFoundation.framework/
 
 SOURCES += main.cpp \
     mainwindow.cpp \

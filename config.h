@@ -24,7 +24,11 @@
 #define ORGNAME  "NovikovAG"
 
 #define PROGNAME "SanDic"
-#define VERSION  "2.4"
+#define VERSION  "2.5"
+
+#if defined(Q_OS_MAC)
+    #include <CoreFoundation/CoreFoundation.h>
+#endif
 
 class Config : public QSettings
 {
