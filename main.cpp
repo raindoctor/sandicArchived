@@ -58,7 +58,7 @@ int main(int argc, char* argv[])
         }
     CFRelease(resourcesURL);
     // chdir(path);
-	QDir::setCurrent(path);
+    QDir::setCurrent(path);
 #endif
 
     QString dbName = "sandic.db";

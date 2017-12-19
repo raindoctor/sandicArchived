@@ -1,3 +1,6 @@
 Makefile
 .qmake.stash
-SanDic.pro.*
+sandic.linux.x86_64
+sandic.dmg
+sandic.app/
+SanDic.pro.user
