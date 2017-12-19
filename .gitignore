@@ -3,5 +3,6 @@ Makefile
 sandic.linux.x86_64
 sandic.dmg
 sandic.app/
+db/
 SanDic.pro.user
 SanDic.pro.1
