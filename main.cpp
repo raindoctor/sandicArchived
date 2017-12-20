@@ -49,6 +49,8 @@ int main(int argc, char* argv[])
     trans2.load(":/rc/qt_" + locale);
     app.installTranslator(&trans2);
 
+//    QString cwd = QFileInfo(".").absolutePath(); 
+
 #ifdef Q_OS_MAC
     CFBundleRef mainBundle = CFBundleGetMainBundle();
     CFURLRef resourcesURL = CFBundleCopyResourcesDirectoryURL(mainBundle);
@@ -67,6 +69,7 @@ int main(int argc, char* argv[])
 
     for (int i = 0; i < argvList.count(); i++)
         if (argvList[i] == "db") {
+//           QDir::setCurrent(cwd);
             dbName = argvList[i + 1];
             break;
         }

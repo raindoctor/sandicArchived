@@ -293,10 +293,10 @@ void MainWindow::about()
                      "Author: <a href='mailto:feedback@sandic.ru?subject=%1'>"
                          "Novikov Artem Gennadievich</a><br>"
                      "Project pages: "
-                         "<a href='http://www.sandic.ru'>"
-                         "www.sandic.ru</a>, "
-                         "<a href='http://sourceforge.net/projects/sandic/'>"
-                         "sourceforge.net/projects/sandic/</a><br>"
+                         "<a href='https://github.com/raindoctor/sandic'>"
+                         "github.com/raindoctor/sandic</a>, "
+                         "<a href='http://sourceforge.net/projects/sandic-new/'>"
+                         "sourceforge.net/projects/sandic-new/</a><br>"
                      "License: <a href='http://www.gnu.org/licenses/gpl.html'>"
                          "GNU GPL v3</a>").arg(PROGNAME, VERSION, QT_VERSION_STR, __DATE__, __TIME__);
 
