@@ -1,4 +1,4 @@
-#Please use the original author's github: https://github.com/novikovag/SanDic
+## Please use the original author's github: https://github.com/novikovag/SanDic
 
 ```
 brew install qt5
@@ -11,5 +11,6 @@ cd db; unzip sandic.db.zip; unzip yukta.db.zip
 mv sandic.app /Applications
 ```
 
-#How to replace sidddhanta-calcutta.ttf with siddhanta.ttf
-https://sites.google.com/site/bayaryn/siddhanta.ttf?attredirects=0
+## How to replace sidddhanta-calcutta.ttf with siddhanta.ttf
+Download from: https://sites.google.com/site/bayaryn/siddhanta.ttf?attredirects=0
+cp siddhanta.ttf rc/siddhanta-calcutta.ttf
